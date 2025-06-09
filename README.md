@@ -1,1 +1,1 @@
-Clases de programación II con resultados de aprendizaje 
+Clases de programación II en PUCESA con resultados de aprendizaje 
