@@ -15,24 +15,25 @@ class ListaSimple:
         nuevo = NodoSimple(dato)
         if not self.primero:
             self.primero = nuevo
-            print(f"Insertando {dato} como primero de la lista")
+            # print(f"Insertando {dato} como primero de la lista")
         else:
             actual = self.primero
+            # print(actual.posterior)
             while actual.posterior:
                 actual = actual.posterior
-                actual.posterior = nuevo
-            print(f"Recorriendo nodo con dato: {actual.posterior}")
+            actual.posterior = nuevo
+                # print(f"Recorriendo nodo con dato: {actual.posterior}")
             # print(nuevo.dato)
-            print(f"Insertando {dato} al final de la lista")
+            # print(f"Insertando {dato} al final de la lista")
         # print(dato,end="<->")
 
-    # def mostrar(self):
-    #     actual = self.cabeza
+    def mostrar(self):
+        actual = self.primero
 
-    #     while actual:
-    #         print(f"[{actual.dato}]", end=" -> ")
-    #         actual = actual.posterior
-    #     print("NULL")
+        while actual:
+            print(f"[{actual.dato}]", end=" -> ")
+            actual = actual.posterior
+        print("NULL")
 
 
 
@@ -42,4 +43,4 @@ lista.insertar_al_final("A")
 lista.insertar_al_final("B")
 lista.insertar_al_final("C")
 lista.insertar_al_final("D")
-# lista.mostrar()
+lista.mostrar()
